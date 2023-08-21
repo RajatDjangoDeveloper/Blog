@@ -11,6 +11,7 @@ class ArticlesController < ApplicationController
     @employee = Article.new(Title, Description) 
     if @employee.save
       redirect_to root_path
+      # hiaolll
     
     end
       
