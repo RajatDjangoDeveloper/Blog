@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @blogs.each do |blog| %>
+      <tr>
+        <th scope="row"><%= blog.id%></th>
+        <td><%= blog.Title%></td>
+        <td><%= blog.Description%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
