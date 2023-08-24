@@ -71,3 +71,8 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "devise"
+
+gem 'cancancan' #for authr=entication library
+# gem 'rolify'    #for role management

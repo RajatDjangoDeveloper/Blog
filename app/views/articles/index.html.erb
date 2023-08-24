@@ -4,14 +4,18 @@
       <th scope="col">#</th>
       <th scope="col">Title</th>
       <th scope="col">Description</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
     <% @blogs.each do |blog| %>
       <tr>
         <th scope="row"><%= blog.id%></th>
-        <td><%= blog.Title%></td>
-        <td><%= blog.Description%></td>
+        <td><%= blog.title%></td>
+        <td><%= blog.description%></td>
+          <td><%= link_to "Edit", edit_article_path(blog), class:"btn btn-primary" %> </td> 
+          <td><%= link_to 'Delete', blog, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-danger" %></td>
+
       </tr>
     <% end %>
   </tbody>
